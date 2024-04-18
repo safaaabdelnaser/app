@@ -1,6 +1,6 @@
 {
   "homepage": "https://safaaabdelnaser.github.io/Momtaz_APP",
-  "name": "YmtazFrontend",
+  "name": "app-tailwindcss-momtaz",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,6 +13,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
+    "git-pages": "^0.8.1",
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
