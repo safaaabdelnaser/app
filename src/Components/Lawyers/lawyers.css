@@ -1,9 +1,0 @@
-.singlType {
-  background-color: #ffffff;
-  width: 250px;
-  height: 200px;
-}
-.singlType:hover {
-  background: linear-gradient(136.97deg, #ddb762 3.34%, #000000 225.23%);
-  cursor: pointer;
-}

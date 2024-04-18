@@ -1,6 +1,6 @@
 import AllTypes from "../Components/AllTypes/AllTypes";
 // import Lawyers from "../Components/Lawyers/Lawyers";
-import Header from "./../Components/Header/Header";
+import Header from "../Components/Header/Header";
 
 const Home = () => {
   return (

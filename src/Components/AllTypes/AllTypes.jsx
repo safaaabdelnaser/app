@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import SingleType from "../SingleType/SingleType";
 import SearchBar from "../SearchBar/SearchBar";
-import "./AllTypes.css";
+// import "./AllTypes.css";
 
 export default function AllTypes() {
   const [searchTerm, setSearchTerm] = useState("");
