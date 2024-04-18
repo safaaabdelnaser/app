@@ -1,45 +1,44 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  // to take reference from header to access on useEffect
-  const headerRef = useRef();
-//   to make sniky Header
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      console.log(window.scrollY);
-      if (window.scrollY > 100) {
-        headerRef.current.style.background = "#0c1524";
-        headerRef.current.style.padding = "30px 0";
-      } else {
-        headerRef.current.style.background = "transparent";
-        headerRef.current.style.padding = "70px 0";
-      }
-    });
-  }, []);
-  const [navLink, setNavLinke] = useState(["Features", "About", "Team"]);
+  const [navLink, setNavLinke] = useState([
+    "الرئيسية",
+    "من نحن",
+    "اتصل بنا",
+    "الدعم الفنى",
+    "ارقام التشغيل",
+    "سياسة الخصوصية",
+  ]);
+
   return (
-    <header
-      ref={headerRef}
-      className="pt-[70px] fixed text-[17px] top-0 left-0 w-full z-50 transition-all duration-200"
-    >
-      <div className="container flex justify-between items-center gap-[30px] flex-col sm:flex-row">
-        <a href="/">
-          <img src="/public/logo.svg" alt="logo" />
-        </a>
-        <nav>
-          <ul className="flex items-center gap-[50px]">
+    <header className="pt-[10px] fixed text-[17px] top-0 left-0 w-full z-50 transition-all duration-200 bg-slate-50">
+      <div className="container flex justify-between items-center gap-[30px]">
+        <FontAwesomeIcon
+          icon={faBars}
+          className="text-[#2C4768] cursor-pointer px-[30px]"
+        />
+
+        <nav className="flex justify-center flex-grow">
+          <ul className="flex items-center gap-[50px] flex-row-reverse mx-auto">
             {navLink.map((link) => (
               <li key={link}>
-                <a
-                  href={`/${link.toLowerCase}`}
-                  className="text-white opacity-[.9] hover:text-red-200 hover:transition-colors duration-400"
+                <Link
+                  to={`/${link.toLowerCase()}`}
+                  className="text-[#2C4768] opacity-[.9] hover:text-yellow-200 hover:transition-colors duration-400"
                 >
                   {link}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
+
+        <a href="/">
+          <img src="/public/logo.png" alt="logo" className="w-[100px] " />
+        </a>
       </div>
     </header>
   );

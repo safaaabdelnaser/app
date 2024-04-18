@@ -1,17 +1,17 @@
-import Features from "../Components/Features/Features";
-import Landing from "../Components/Landing/Landing";
-import Testimonials from "../Components/Testimonials/testimonials";
-import GetStarted from "../Components/getStarted/getStarted";
-import StayProductive from "../Components/stayProductive/stayProductive";
+import AllTypes from "../Components/AllTypes/AllTypes";
+// import Lawyers from "../Components/Lawyers/Lawyers";
+import Header from "./../Components/Header/Header";
 
 const Home = () => {
   return (
     <>
-      <Landing />
-      <Features/>
-      <StayProductive/>
-      <Testimonials/>
-      <GetStarted/>
+      <div>
+        <Header />
+      </div>
+      <div className="my-[100px]">
+        <AllTypes />
+      </div>
+      <div>{/* <Lawyers /> */}</div>
     </>
   );
 };
