@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import "./Lawyers";
+import "./Lawyers.css";
 
 const LawyerDetails = ({ lawyer }) => {
   const { categoryId } = useParams();

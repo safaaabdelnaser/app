@@ -1,4 +1,4 @@
-import "./SingleType";
+import "./SingleType.css";
 export default function SingleType({ icon, title, subtitle, categoryId }) {
   const handleClick = () => {
     window.location.href = `/lawyers/${categoryId}`;
