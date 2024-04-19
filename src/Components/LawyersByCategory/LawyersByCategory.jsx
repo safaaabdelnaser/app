@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import LawyerDetails from "../Lawyers/LawyersDetails";
+// import { Outlet } from "react-router-dom";
 
 export default function LawyersByCategory() {
   const [lawyerData, setLawyerData] = useState(null);
@@ -28,14 +29,16 @@ export default function LawyersByCategory() {
   }, []);
 
   return (
-    <div>
-      {lawyerData ? (
-        <LawyerDetails lawyer={lawyerData} />
-      ) : (
-        <p className="flex justify-center items-center h-full mt-80">
-          Loading...
-        </p>
-      )}
-    </div>
+    <>
+      <div>
+        {lawyerData ? (
+          <LawyerDetails lawyer={lawyerData} />
+        ) : (
+          <p className="flex justify-center items-center h-full mt-80">
+            Loading...
+          </p>
+        )}
+      </div>
+    </>
   );
 }
